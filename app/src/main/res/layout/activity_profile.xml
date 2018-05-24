@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:src="@mipmap/ic_launcher_round"
+        android:scaleType="centerInside"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/icon_border"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/profile_image"
+        android:id="@+id/profile_name"
+        android:text="PlaceHolder"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:alpha="0.2"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/profile_name"
+        android:id="@+id/profile_email"
+        android:text="placeholder@gmail.com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:layout_below="@id/profile_email"
+            android:layout_margin="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:isScrollContainer="false"
+                android:scrollbars="none"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/order_history"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgview_order_history"
+            android:layout_width="30dp"
+            android:src="@drawable/order"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/txtview_order_history"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@id/imgview_order_history"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:text="Orders placed"/>
+
+        <View
+            android:layout_toRightOf="@id/imgview_order_history"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:alpha="0.2"
+            android:layout_marginTop="10dp"
+            android:background="#000"
+            android:layout_below="@id/txtview_order_history"></View>
+    </RelativeLayout>
+   <!--My Information Layout-->
+
+    <RelativeLayout
+        android:id="@+id/my_information"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgview_my_information"
+            android:layout_width="30dp"
+            android:src="@drawable/profile"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/txtview_my_information"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@id/imgview_my_information"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:text="My Information"/>
+
+        <View
+            android:layout_toRightOf="@id/imgview_my_information"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:alpha="0.2"
+            android:layout_marginTop="10dp"
+            android:background="#000"
+            android:layout_below="@id/txtview_my_information"></View>
+    </RelativeLayout>
+
+<!--Payment Cards Layouts-->
+
+    <RelativeLayout
+        android:id="@+id/payment_cards"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgview_payment_cards"
+            android:layout_width="30dp"
+            android:src="@drawable/payment"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/txtview_payment_cards"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@id/imgview_payment_cards"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:text="Payment Cards"/>
+
+        <View
+            android:layout_toRightOf="@id/imgview_payment_cards"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:alpha="0.2"
+            android:layout_marginTop="10dp"
+            android:background="#000"
+            android:layout_below="@id/txtview_payment_cards"></View>
+    </RelativeLayout>
+
+    <!--Gift Cards Layout-->
+    <RelativeLayout
+        android:id="@+id/gift_cards"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgview_gift_cards"
+            android:layout_width="30dp"
+            android:src="@drawable/giftcard"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/txtview_gift_cards"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@id/imgview_gift_cards"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:text="Gift Cards"/>
+
+        <View
+            android:layout_toRightOf="@id/imgview_gift_cards"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:alpha="0.2"
+            android:layout_marginTop="10dp"
+            android:background="#000"
+            android:layout_below="@id/txtview_gift_cards"></View>
+    </RelativeLayout>
+<!--Contact Layout-->
+
+    <RelativeLayout
+        android:id="@+id/contact"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgview_contact"
+            android:layout_width="30dp"
+            android:src="@drawable/contact"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/txtview_contact"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@id/imgview_contact"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:text="Contact Us"/>
+
+        <View
+            android:layout_toRightOf="@id/imgview_contact"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:alpha="0.2"
+            android:layout_marginTop="10dp"
+            android:background="#000"
+            android:layout_below="@id/txtview_contact"></View>
+    </RelativeLayout>
+
+    <!--Logout Layout-->
+    <RelativeLayout
+        android:id="@+id/logout"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgview_logout"
+            android:layout_width="30dp"
+            android:src="@drawable/logout"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/txtview_logout"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@id/imgview_logout"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:text="Logout"/>
+
+        <View
+            android:layout_toRightOf="@id/imgview_logout"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:alpha="0.2"
+            android:layout_marginTop="10dp"
+            android:background="#000"
+            android:layout_below="@id/txtview_logout"></View>
+    </RelativeLayout>
+            </LinearLayout>
+            </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

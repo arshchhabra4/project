@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFF"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartActivity">
+
+    <!--Custom ActionBar / Toolbar-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="#FFF">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ZARA"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+
+    <cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager
+        android:layout_below="@id/toolbar"
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+       <!--Sliding Dots-->
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicator"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"/>
+
+
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_border"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="Sign UP"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btn_shop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_border"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:text="SHOP"
+        android:textColor="@android:color/white" />
+</RelativeLayout>

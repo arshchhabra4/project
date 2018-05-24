@@ -13,9 +13,13 @@ import android.text.style.ClickableSpan;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class SignIn extends AppCompatActivity {
+    EditText inputemail,inputpassword;
+    Button singin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +28,7 @@ public class SignIn extends AppCompatActivity {
 
         /*Spannable TExt*/
             spantext();
+            init();
 
         /*Making status bar light*/
         changeStatusBarColor();
@@ -37,6 +42,12 @@ public class SignIn extends AppCompatActivity {
            }
        });
 
+    }
+
+    private void init() {
+        inputemail=findViewById(R.id.input_email);
+        inputpassword=findViewById(R.id.input_password);
+        singin=findViewById(R.id.btn_signin);
     }
 
     private void spantext() {

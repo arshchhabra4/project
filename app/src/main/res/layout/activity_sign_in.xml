@@ -13,7 +13,7 @@
         android:minHeight="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:titleTextColor="@android:color/white"
+        app:titleTextColor="#000"
         android:background="#FFF">
         <RelativeLayout
             android:layout_width="match_parent"

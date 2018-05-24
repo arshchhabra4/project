@@ -43,15 +43,13 @@
 <ScrollView
     android:layout_width="match_parent"
     android:isScrollContainer="false"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:layout_below="@id/toolbar_signin">
     <LinearLayout
-        android:layout_below="@id/toolbar_signin"
-        android:layout_alignParentBottom="true"
         android:orientation="vertical"
         android:layout_margin="20dp"
-        android:layout_gravity="center_vertical"
         android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
         android:layout_height="wrap_content">
 
 
@@ -69,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
                 android:theme="@style/EditTextTheme"
-                android:hint="enter username" />
+                android:hint="Username" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout

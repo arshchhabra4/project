@@ -1,5 +1,6 @@
 package com.example.arsh.project;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -20,6 +21,7 @@ import android.widget.TextView;
 public class SignIn extends AppCompatActivity {
     EditText inputemail,inputpassword;
     Button singin;
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +31,7 @@ public class SignIn extends AppCompatActivity {
         /*Spannable TExt*/
             spantext();
             init();
-
+            list2();
         /*Making status bar light*/
         changeStatusBarColor();
 
@@ -78,5 +80,37 @@ public class SignIn extends AppCompatActivity {
             window.setStatusBarColor(Color.WHITE);
             window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
+    }
+    private void list2() {
+        singin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String email = inputemail.getText().toString().trim();
+
+                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
+                if (!email.matches(emailPattern)) {
+
+                    inputemail.setError("not valid");
+                    inputemail.requestFocus();
+                    if (email.equals("")) {
+                        inputemail.setError("required field");
+                        inputemail.requestFocus();
+                    }
+                } else if (inputpassword.getText().toString().trim().length() <= 0)
+
+                {
+
+                    inputpassword.setError("enter password");
+                    inputpassword.requestFocus();
+
+                } else {
+                    Intent i = new Intent(SignIn.this, MainActivity.class);
+                    startActivity(i);
+                    finish();
+                }
+
+            }
+        });
     }
 }
